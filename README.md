@@ -196,5 +196,17 @@ All plotting functions accept tidy DataFrames and save figures. By default, outp
 - compute_high_adoption_prob
   - computes high adoption probability
 
+## State-Dependent Subsidy (Adoption-Based)
+`In addition to the built-in time-based subsidy policies, we evaluate a state-dependent subsidy that activates when EV adoption reaches specific diffusion stages rather than  fixed time steps.`
+`The subsidy is active only when the adoption fraction `
+`𝑋(𝑡) lies within a predefined interval (early, mid, or late adoption).`
+`When active, the policy temporarily increases the EV coordination payoff (a0) with subsidy intensities `
+`Δ𝑎0∈{0.15,0.30}Δa0.`
+`Outside the adoption window, parameters revert to baseline values.`
+
+`Experiments run for T = 200 steps, average over 30 stochastic trials, and use a logit decision rule (tau = 2.0).`
+
+`The subsidy comparison focuses on Barabási–Albert (BA) and Erdős–Rényi (ER) networks, which exhibit slower diffusion and stronger coordination barriers than Watts–Strogatz networks. Due to computational constraints, these networks form the main basis for policy comparison. All resulting figures are saved to plots/.`
+
 ---
 If you need an additional plot style, experiment type, or policy, add a new DataFrame builder in `ev_experiments.py` and a companion function in `ev_plotting.py` to keep computation and visualization cleanly separated.
