@@ -197,12 +197,12 @@ class EVStagHuntModel(Model):
 
     def __init__(
         self,
-        initial_ev=10, # - initial_ev: number of initial EV nodes
-        a0=2.0, # - a0: base payoff for EV adoption
-        beta_I=3.0, # - beta_I: payoff enhancement factor for EV adoption
-        b=1.0, # - b: payoff for ICE defection
-        g_I=0.1, # - g_I: infrastructure growth rate
-        I0=0.05, # - I0: initial infrastructure level
+        initial_ev=10,
+        a0=2.0,
+        beta_I=3.0,
+        b=1.0,
+        g_I=0.1,
+        I0=0.05,
         seed=None,
         network_type="random",
         n_nodes=100,
